@@ -26,67 +26,50 @@ class _TabNavState extends State<TabNav> {
         length: 2,
         child: Column(
           children: [
-            Container(
-              child: TabBar(
-                tabs: [
-                  Tab(
-                    text: 'Tin',
-                  ),
-                  Tab(
-                    text: 'Reels',
-                  )
-                ],
-                labelColor: Colors.lightBlue,
-                unselectedLabelColor: Colors.black,
-              ),
+            TabBar(
+              tabs: [
+                Tab(
+                  text: 'Tin',
+                ),
+                Tab(
+                  text: 'Reels',
+                )
+              ],
+              labelColor: Colors.lightBlue,
+              unselectedLabelColor: Colors.black,
             ),
             Container(
-              margin: const EdgeInsets.only(left: 20.0, right: 20.0),
               height: 300,
               child: TabBarView(
                 children: <Widget>[
-                  ListView(children: [
-                    CarouselSlider(
-                      items: [
-                        Container(
-                          margin: EdgeInsets.all(6.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.0),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://gamek.mediacdn.vn/133514250583805952/2021/8/16/hot8-1629130889395889998278.jpg"),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        //1st Image of Slider
-                        Container(
-                          margin: EdgeInsets.all(6.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.0),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://gamek.mediacdn.vn/133514250583805952/2021/8/16/hot9-16291309016682040410412.jpg"),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ],
+                  CarouselSlider(
+                    items: List.generate(
+                        10,
+                        (index) => Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                      'https://gamek.mediacdn.vn/133514250583805952/2021/8/16/hot9-16291309016682040410412.jpg'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            )),
 
-                      //Slider Container properties
-                      options: CarouselOptions(
+                    //Slider Container properties
+                    options: CarouselOptions(
                         height: 300,
-
-                        // enlargeCenterPage: true,
-                        // autoPlay: true,
-                        // aspectRatio: 16 / 9,
-                        // autoPlayCurve: Curves.fastOutSlowIn,
-                        enableInfiniteScroll: true,
-                        // autoPlayAnimationDuration: Duration(milliseconds: 800),
+                        scrollPhysics: BouncingScrollPhysics(),
+                        scrollDirection: Axis.horizontal,
+                        pageSnapping: false,
+                        enableInfiniteScroll: false,
+                        aspectRatio: 1,
+                        disableCenter: true,
                         viewportFraction: 0.4,
-                      ),
-                    ),
-                  ]),
+                        enlargeCenterPage: false,
+                        padEnds: false),
+                  ),
                   Container(
                     margin: const EdgeInsets.only(left: 20.0, right: 20.0),
                     child: Text('tjis is tete'),
