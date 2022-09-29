@@ -34,7 +34,7 @@ class _menustState extends State<menus> {
           onPressed: () {},
         ),
         title: Image.asset(
-          "../assets/images/images.png",
+          'images/images.png',
           width: 100,
         ),
         backgroundColor: Color.fromRGBO(59, 89, 152, 1),

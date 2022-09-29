@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -34,7 +32,7 @@ class _NewsFeedState extends State<NewsFeed> {
                         decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
-                              '../assets/images/avatar.jpg',
+                              'images/avatar.jpg',
                             ),
                           ),
                           shape: BoxShape.circle,
@@ -112,7 +110,7 @@ class _NewsFeedState extends State<NewsFeed> {
                 height: 300,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("../assets/images/bg/download.jpg"),
+                    image: AssetImage('images/bg/download.jpg'),
                     fit: BoxFit.fitWidth,
                   ),
                 ),

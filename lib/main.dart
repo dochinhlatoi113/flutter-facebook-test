@@ -3,7 +3,7 @@ import 'package:flutter_application_1/headerItem.dart';
 import 'package:flutter_application_1/libr.dart';
 import 'package:flutter_application_1/tabnav.dart';
 import 'dart:ui';
-import 'dart:html';
+// import 'dart:html';
 import 'package:flutter_application_1/main1.dart';
 import 'package:flutter_application_1/newsfeed.dart';
 
@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.black),
       home: myTestHome(),
     );
@@ -38,7 +39,7 @@ class myTestHome extends StatelessWidget {
             onPressed: () {},
           ),
           title: Image.asset(
-            "../assets/images/images.png",
+            'images/images.png',
             width: 100,
           ),
           backgroundColor: Color.fromRGBO(59, 89, 152, 1),

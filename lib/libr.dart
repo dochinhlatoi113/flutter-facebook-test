@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class Libr extends StatefulWidget {
@@ -25,7 +23,7 @@ class _LibrState extends State<Libr> {
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    '../assets/images/avatar.jpg',
+                    'images/avatar.jpg',
                   ),
                 ),
                 shape: BoxShape.circle,
